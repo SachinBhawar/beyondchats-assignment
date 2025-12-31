@@ -6,12 +6,12 @@ const articlesRouter = Router();
 
 articlesRouter.get("/", async (req, res) => {
     try {
-        const docInDb = await Article.find();
-        if (docInDb.length > 0) {
-            return res.status(200).json(docInDb);
+        const isDocsInDb = await Article.find();
+        if (isDocsInDb.length > 0) {
+            return res.status(200).json(isDocsInDb);
         }
         const result = await scrapAndGetArticles();
-        Article.insertMany(result);
+        await Article.insertMany(result);
         res.status(200).json(result);
     } catch (err) {
         console.error("Error fetching articles:", err.message);

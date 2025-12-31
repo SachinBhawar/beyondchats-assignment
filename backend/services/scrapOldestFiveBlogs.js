@@ -12,7 +12,7 @@ async function scrapePage(pageNumber) {
 
     const articles = [];
 
-    $("article .card-content").each((_, el) => {
+    $("article .card-content").each((article, el) => {
         const title = $(el).find("h2").text().trim();
         const content = $(el).find(".entry-excerpt").text().trim();
         const author = $(el).find(".entry-meta").last().find("a").text().trim();
@@ -54,8 +54,8 @@ async function scrapAndGetArticles() {
     try {
         const result = await scrapeLastFiveArticles();
 
-        console.log("Last 5 Oldest Articles:\n");
-        console.log(result);
+        console.log("Last 5 Oldest Articles:", result);
+
         return result;
     } catch (err) {
         console.error("Error scraping blogs:", err.message);
