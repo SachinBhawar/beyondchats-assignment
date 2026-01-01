@@ -12,7 +12,7 @@ export default function Articles() {
     const [editingId, setEditingId] = useState(null);
     const [showForm, setShowForm] = useState(false);
 
-    const API_BASE = "http://localhost:5000/api/articles";
+    const API_BASE = import.meta.env.VITE_API_BASE;
 
     const fetchArticles = async () => {
         setLoading(true);
