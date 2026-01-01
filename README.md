@@ -240,18 +240,10 @@ VITE_API_URL=http://localhost:3000/api
 ## 🚢 Deployment
 
 ### Backend (Render)
-1. Connect your GitHub repository to Render
-2. Create a new Web Service
-3. Set environment variables (MONGO_URI, PORT)
-4. Deploy from the `backend` directory
-5. Live at: https://beyondchats-assignment-etd4.onrender.com
+1. Live at: https://beyondchats-assignment-etd4.onrender.com
 
 ### Frontend (Vercel)
-1. Connect your GitHub repository to Vercel
-2. Set build command: `npm run build`
-3. Set output directory: `dist`
-4. Deploy from the `frontend` directory
-5. Live at: https://beyondchats-assignment-fronend.vercel.app/
+1.Live at: https://beyondchats-assignment-fronend.vercel.app/
 
 ## 🔄 Development Workflow
 
@@ -292,15 +284,6 @@ VITE_API_URL=http://localhost:3000/api
 - Ensure API_BASE URL matches backend URL
 - Check browser console for detailed errors
 
-### Tailwind CSS not styling
-- Run `npm install` to install dependencies
-- Ensure `index.css` has Tailwind directives
-- Check `tailwind.config.cjs` content paths are correct
-- Rebuild with `npm run dev`
-
-## 📝 License
-
-ISC License - See package.json for details
 
 ## 👤 Author
 
@@ -314,5 +297,4 @@ For issues or questions, please open an issue on the GitHub repository.
 
 ---
 
-**Last Updated:** January 2026  
-**Version:** 1.0.0
+
